@@ -1,0 +1,26 @@
+.mat-mdc-form-field {
+  min-width: 100%;
+  background: #ffffff00;
+
+  &:hover{
+    background: #ffffff00;
+  }
+}
+
+.mat-mdc-text-field-wrapper {
+  width: 80%;
+  background: #ffffff00;
+
+  &:hover {
+    background: #ffffff00;
+  }
+}
+
+
+.mat-mdc-form-field-focus-overlay {
+  background-color: #ffffff00;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disable) {
+  background-color: #ffffff00;
+}

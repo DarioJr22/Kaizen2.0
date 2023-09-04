@@ -1,0 +1,6 @@
+<ng-container *ngFor="let n of notifications">
+  <div #notification [attr.class]="n.type">
+    {{n.message}}
+    <mat-icon style="cursor: pointer;" (click)="close(n.id,notification)">close</mat-icon>
+  </div>
+</ng-container>

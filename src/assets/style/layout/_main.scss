@@ -1,0 +1,133 @@
+@import "./../core/core_token.scss";
+
+body{
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+//conteudoPrincipal
+// Search the better way to refactoring this part of code. Because it's not seems on best pratice
+.mainContent{
+grid-template-columns: 1fr;
+grid-template-rows:100%;
+}
+
+
+//Fiscal Home
+  .homeFiscal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//Login
+.loginContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  mat-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 23px;
+    box-shadow: $shadow2;
+    border: 1px $background-black solid;
+    form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      mv-button{
+        color: $background-black;
+      }
+    }
+  }
+
+}
+
+//Home
+.tela-home{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .grid-modules{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-areas:
+    "a b c d"
+    "e f g h";
+    grid-row-gap: 2rem;
+    grid-column-gap:2rem;
+    align-self: center;
+    justify-self: center;
+
+    @for $i from 0 through 7{
+      .module-grid-#{$i}{
+        @if $i == 0 {
+          grid-area: a;
+        }@else if $i == 1 {
+          grid-area: b;
+        }@else if $i == 2 {
+          grid-area: c;
+        }@else if $i == 3 {
+          grid-area: d;
+        }@else if $i == 4 {
+          grid-area: e;
+        }@else if $i == 5 {
+          grid-area: f;
+        }@else if $i == 6 {
+          grid-area: g;
+        }@else if $i == 7 {
+          grid-area: h;
+        }
+        width: 10.625rem;
+        height: 10.625rem;
+        padding: 0.5rem;
+        border-radius: 1.4375rem;
+        justify-self: center;
+        background: $mv-gradient;
+        box-shadow:$shadow2;
+        transform:translate(0.0rem,0.0rem) ;
+        transition: transform ease-in-out 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h3{
+          margin: 0;
+        }
+      }
+
+        //Motion, module cards
+      .module-grid-#{$i}:hover{
+        cursor: pointer;
+        transform:translate(0.0rem,-0.2rem) ;
+        transition: transform ease-in-out 0.3s;
+        opacity: 0.8;
+      }
+
+      //When module cards are disabled
+      .disabled{
+        cursor: not-allowed;
+        background: $background-black;
+      }
+
+      .module-grid-#{$i}.disabled:hover{
+        cursor: not-allowed;
+        transition: none;
+        transform: none;
+      }
+    }
+  }
+}
