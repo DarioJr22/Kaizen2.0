@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-input',
+  selector: 'kz-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss']
 })

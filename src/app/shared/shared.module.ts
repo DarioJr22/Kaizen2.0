@@ -29,8 +29,12 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSliderModule } from '@angular/material/slider';
-import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CalendarComponent } from './calendar/calendar.component';
+import { ToolkitComponent } from './toolkit/toolkit.component';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { ButtonComponent } from './button/button.component';
 
 
 @NgModule({
@@ -39,7 +43,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListTransacComponent,
     AvatarComponent,
     MultiCardsComponent,
-    SidebarComponent
+    SidebarComponent,
+    CalendarComponent,
+    ToolkitComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,
@@ -74,6 +81,24 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
 
 
+  ],
+
+  exports:[
+    InputComponent,
+    ListTransacComponent,
+    AvatarComponent,
+    MultiCardsComponent,
+    SidebarComponent,
+    CalendarComponent,
+    ToolkitComponent,
+    ButtonComponent
+
+  ],
+
+  providers:[
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
+    { provide: 'ttlDefault', useValue: 3000 },
+    provideNgxMask()
   ]
 })
 export class SharedModule { }

@@ -1,1 +1,38 @@
-<p>login works!</p>
+
+<div>
+<form class="form-login" autocomplete="off" [formGroup]="FormGroup">
+  <kz-input
+  [name]="'Login'"
+  [control]="this.getEventFields('login')">
+  </kz-input>
+  <kz-input
+  [name]="'Senha'"
+  [control]="this.getEventFields('senha')"
+  [type]="'password'">
+  </kz-input>
+  <kz-button
+  [type]="'raised'">
+  </kz-button>
+
+  <hr style="width: 100%;">
+  <div class="opcoesEntrar">
+    <kz-button [type]="'fab'">
+      <img src="./../../../assets/imgs/Face.svg">
+    </kz-button>
+    <kz-button [type]="'fab'">
+      <img src="./../../../assets/imgs/Google.svg">
+    </kz-button>
+    <kz-button [type]="'fab'">
+     <mat-icon class="mat-18">
+      how_to_reg
+     </mat-icon>
+    </kz-button>
+  </div>
+</form>
+
+
+
+
+</div>
+
+

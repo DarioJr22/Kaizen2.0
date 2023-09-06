@@ -15,12 +15,12 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 //Light Theme
-$ERPMAIS-accent: mat.define-palette($mv-light-palette, 400, 500, 600);
-$ERPMAIS-mvcolor:mat.define-palette($mv-light-palette);
+$ERPMAIS-accent: mat.define-palette($kz-palette-blue, 400, 500, 600);
+$ERPMAIS-mvcolor:mat.define-palette($kz-palette-blue);
 
 //Dark Theme
-$ERPMAIS-accent: mat.define-palette($mv-light-palette, 400, 500, 600);
-$ERPMAIS-mvcolor:mat.define-palette($mv-light-palette );
+$ERPMAIS-accent: mat.define-palette($kz-palette-blue, 400, 500, 600);
+$ERPMAIS-mvcolor:mat.define-palette($kz-palette-blue );
 
 //FormField
 //$ERPMAIS-form-field: mat.define-palette($mv-form-field-palette);
